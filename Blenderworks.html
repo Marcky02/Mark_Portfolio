@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blender Works</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #221435;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgb(255, 142, 3);
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color:  #ffbf00;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            background-color: #0e6b75;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color:  #8c00ff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px; /* Adjust margin between groups */
+        }
+
+        .image {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            margin-right: 10px; /* Adjust margin between images */
+        }
+
+        .image:last-child {
+            margin-right: 0; /* Remove margin for the last image in each group */
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #0a5461;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .image img:hover {
+            transform: scale(1.1);
+        }
+
+        .image p {
+            margin-top: 10px;
+            opacity: 0;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: opacity 0.5s ease;
+        }
+
+        .image:hover p {
+            opacity: 1;
+        }
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%; /* Adjust the maximum width of the image in the lightbox */
+            max-height: 90%; /* Adjust the maximum height of the image in the lightbox */
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blender Works</h1>
+    </header>
+    <nav>
+        <a href="INDEX.html">Home</a>
+        <!-- Add more navigation links as needed -->
+    </nav>
+    <div class="container">
+        <div class="group">
+            <div class="image">
+                <img src="scene%202%20concept%20.png" alt="Cyberpunk City" onclick="openLightbox('file:///D:/CONTEST/scene%202%20concept%20.png')">
+                <p>Cyberpunk City</p>
+            </div>
+            <div class="image">
+                <img src="ROULETTE1.4.png" alt="3D ROULETTE" onclick="openLightbox('file:///D:/CARDINAL_PORTFOLIO/ROULETTE1.4.png')">
+                <p>3D ROULETTE</p>
+            </div>
+        </div>
+        <div class="group">
+            <div class="image">
+                <img src="planet2.png" alt="Asteroids" onclick="openLightbox('file:///D:/CARDINAL_PORTFOLIO/planet2.png')">
+                <p>Asteroids</p>
+            </div>
+            <div class="image">
+                <img src="scene1%20concept.png" alt="Poluted City" onclick="openLightbox('file:///D:/CONTEST/scene1%20concept.png')">
+                <p>Poluted City</p>
+            </div>
+        </div>
+        <div class="group">
+            <div class="image">
+                <img src="scene%204%20concept2.png" alt="3D Comic Shader" onclick="openLightbox('file:///D:/CONTEST/scene%204%20concept2.png')">
+                <p>3D Comic Shader</p>
+            </div>
+            <div class="image">
+                <img src="ROULETTE%20CHIPS.png" alt="Roulette Chips" onclick="openLightbox('file:///D:/CARDINAL_PORTFOLIO/ROULETTE%20CHIPS.png')">
+                <p>Roulette Chips</p>
+            </div>
+        </div>
+        <div class="group">
+            <div class="image">
+                <img src="HOMESCENE.2png.png" alt="Home Scene" onclick="openLightbox('file:///D:/CONTEST/HOMESCENE.2png.png')">
+                <p>Home Scene</p>
+            </div>
+            <div class="image">
+                <img src="JET.png" alt="Jet" onclick="openLightbox('file:///D:/CARDINAL_PORTFOLIO/JET.png')">
+                <p>Jet</p>
+            </div>
+        </div>
+        <div class="group">
+            <div class="image">
+                <img src="spaceship.png" alt="Spaceship" onclick="openLightbox('file:///D:/CARDINAL_PORTFOLIO/spaceship.png')">
+                <p>Spaceship</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox HTML -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img src="" alt="Enlarged Image" id="lightbox-image">
+        <span class="close-button" onclick="closeLightbox()">&times;</span>
+    </div>
+
+    <script>
+        function openLightbox(imageSrc) {
+            document.getElementById('lightbox-image').src = imageSrc;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

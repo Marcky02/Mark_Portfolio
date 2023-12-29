@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MARK VINCENT S. CARDINAL - Resume</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('path/to/paper-texture.jpg'); /* Add the path to your paper texture image */
+      background-color: #f4f4f4;
+      background-size: cover;
+      color: #555;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      background-color: #fff;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2, h3 {
+      color: #3498db;
+      margin-bottom: 1rem;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+
+    .info div {
+      flex: 1;
+    }
+
+    .profile-pic {
+      max-width: 120px;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+    }
+
+    .education, .experience, .skills {
+      margin-top: 1.5rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+    }
+
+    .skills li {
+      background-color: #3498db;
+      color: #ecf0f1;
+      padding: 0.3rem 0.8rem;
+      margin: 0.3rem;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="ASSETS/imgs/CARDINAL, MARK VINCENT S. BSIT_ANIM 2.jpg" alt="Profile Picture" class="profile-pic">
+    <h1>MARK VINCENT S. CARDINAL</h1>
+    <p>3D Model and Environment Artist</p>
+  </header>
+
+  <section>
+    <div class="info">
+      <div>
+        <h2>Contact Information</h2>
+        <p>Email: mark09169103256@gmail.com</p>
+        <p>Phone: 0970-9455-314</p>
+        <p>Artstation: mark_cardinal.artstation.com</p>
+        <p>GitHub: github.com/marcky02</p>
+      </div>
+      <div>
+        <h2>Address</h2>
+        <p>Palapas, Ligao City, Albay</p>
+      </div>
+    </div>
+
+    <div class="education">
+        <h2>Education</h2>
+        <p><strong>Degree:</strong> Bachelor of Science in Information Technology Major in Animation</p>
+        <p><strong>University:</strong> Bico University Polangui</p>
+        <p><strong>Graduation Year:</strong> 2025</p>
+
+        <h2>Work Experience</h2>
+        <p><strong>Job Title:</strong> 3D Artist</p>
+        <p><strong>Company:</strong> BlueHills Studios</p>
+        <p><strong>Duration:</strong> May 2019 - Present</p>
+        <p><strong>Responsibilities:</strong></p>
+        <ul>
+            <li>Developing 3D Environment used for films</li>
+            <li>Collaborating with different 3D Artists</li>
+            <li>Creating 3D Characters</li>
+            <li>Creating 3D and CGI Character doubles</li>
+        </ul>
+
+    <div class="experience">
+      <h2>Work Experience</h2>
+      <ul>
+        <li>
+          <h3>BlueHills Inc.</h3>
+          <p>3D Artist</p>
+          <p>June 2023 - Present</p>
+          <p>
+      </ul>
+    </div>
+
+    <div class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Blender</li>
+        <li>Maya</li>
+        <li>Adobe Premiere</li>
+        <li>Adobe After FX</li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <a href="#" id="downloadLink" download="Mark_Vincent_Cardinal_Resume.html">Download Resume</a>
+
+  <script>
+    
+    document.getElementById('downloadLink').addEventListener('click', function() {
+      var htmlContent = document.documentElement.outerHTML;
+      var blob = new Blob([htmlContent], { type: 'text/html' });
+      var link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'Mark_Vincent_Cardinal_Resume.html';
+      link.click();
+    });
+  </script>
+
+</body>
+</html>

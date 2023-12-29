@@ -1,0 +1,26 @@
+       *{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #123f5d;
+        }
+        header {
+            background-color: #083434;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .image {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
